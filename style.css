@@ -1,14 +1,18 @@
 * {
     font-family: Work Sans;
+    padding: 0;
+    margin: 0;
 }
+
+
 
 header {
     display: flex;
-    margin: 10px auto;
     justify-content: space-around;
     align-items: center;
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 30px;
 }
 
 #gamer {
@@ -61,21 +65,22 @@ ul li {
     font-weight: 500;
 }
 
+
+/* banner1 styles */
 .banner1 {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.banner1 img{
-    width: 600px;
-    height: 600px;
-}
+
 
 #goat {
     background-image: url(./images/Group\ 14.png);
-    width: 900px;
-    height: 700px;
+    width: 100%;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+
+
 }
 
 .banner1-play {
@@ -83,6 +88,7 @@ ul li {
     padding-left: 160px;
     font-size: 3rem;
     font-weight: 600;
+    padding-bottom: 30px;
 }
 
 .banner1-goat {
@@ -90,7 +96,7 @@ ul li {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    padding-bottom: 30px;
     padding-left: 160px;
     font-size: 5.93rem;
     font-weight: 800;
@@ -100,10 +106,11 @@ ul li {
     color: #534C64;
     font-size: 1.7rem;
     font-weight: 500;
+
 }
 
 .banner1>div ul li {
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     padding-left: 140px;
 }
 
@@ -132,6 +139,163 @@ ul li {
     padding-top: 50px;
 }
 
+/* banner2 styles */
+
+.banner2 {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    margin-right: 200px;
+    margin-left: 200px;
+    align-items: center;
+}
+
+.banner2-title {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.banner2 div p {
+    width: 520px;
+    font-size: 1.12rem;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.btn3 {
+    padding: 20px 40px;
+    border-radius: 48px;
+    background: #FF42A5;
+    border: 0;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.banner2 div h4,
+p {
+    color: gray;
+}
+
+/* banner3 style */
+
+.banner3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.banner3-title {
+    color: #0B0223;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#funn {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+    margin-bottom: 150px;
+}
+
+.card {
+    position: relative;
+    max-width: 342px;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+
+.middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 95%;
+    width: 95%;
+    opacity: 0;
+    transition: .3s ease 1s;
+    background-color: #0B0223;
+    border: 10px solid palevioletred;
+    border-radius: 5px;
+}
+
+.middle p {
+    color: #FF42A5;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card:hover .middle {
+    opacity: 1;
+}
+
+.icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-area p {
+    text-align: left;
+}
+
+.banner4 {
+    display: flex;
+    margin-left: 200px;
+    text-align: right;
+    gap: 200px;
+    align-items: center;
+}
+
+.banner4-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.banner4-description {
+    width: 353px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+#instantly {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.removed-img {
+    height: 400px;
+    position: relative;
+    top: 200px;
+    right: 950px;
+}
+
+
 /* for mobile phone of small devices */
 @media screen and (max-width:576px) {
 
@@ -141,8 +305,8 @@ ul li {
     }
 
     .head {
-        margin-right: 150px;
-        margin-top: 100px;
+        margin-right: 210px;
+        margin-top: 50px;
     }
 
     .nav>li {
@@ -151,35 +315,115 @@ ul li {
 
     .banner1 {
         flex-direction: column-reverse;
-        margin-top: 80px;
+
         margin-bottom: 50px;
+        text-align: start;
     }
 
-    .banner1 img{
-        width: 100%;
-        height: 100%;
+
+
+    .banner1-play {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-left: 10px;
     }
 
-    
-
-    .banner1-play, .banner1-goat{
-        padding: 10px;
+    .banner1-goat {
+        font-size: 2.6rem;
+        font-weight: 600;
+        padding-left: 10px;
     }
+
+
 
     .banner1>div ul li {
         padding: 10px;
+        font-size: 1rem;
     }
 
     .btn-div {
-        padding: 10px;
+        padding: 5px;
+        font-size: .2rem;
+    }
+
+
+
+    .banner2 {
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .banner2-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding-right: 10px;
+        background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .banner2 div p {
+        width: 300px;
+    }
+
+    .banner2 img {
+        width: 300px;
+    }
+
+    .btn3 {
+        font-size: medium;
+    }
+
+    .box-card {
+        flex-direction: column;
+    }
+
+    .banner4 {
+        /* flex-direction: column; */
+        /* margin-left: 0; */
+    }
+
+    .banner4>div h2 {
+        padding-bottom: 30px;
+    }
+
+    .banner4>div {
+        text-align: center;
+    }
+
+    .banner4>img {
+        /* width: 100%; */
+    }
+
+    .removed-img{
+        width: 50%;
+        position: relative;
+        bottom: 50%;
     }
 }
 
 
+
+
 /* for tab or medium devices */
 @media screen and (min-width:576px) and (max-width:992px) {
-    header {
+
+    header,
+    .banner2 {
         flex-direction: column;
+    }
+
+    .banner1 {
+        flex-direction: column-reverse;
+    }
+
+    .banner2-title {
+        background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .head {
@@ -188,4 +432,7 @@ ul li {
         margin-bottom: 100px;
     }
 
+    .box-card {
+        margin-left: 10px;
+    }
 }
