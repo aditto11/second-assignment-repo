@@ -70,13 +70,15 @@ ul li {
 .banner1 {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 
 
 #goat {
-    background-image: url(./images/Group\ 14.png);
+    background-image: url(images/Group\ 14.png);
     width: 100%;
+    height: auto;
     background-repeat: no-repeat;
     padding-top: 50px;
 
@@ -145,12 +147,17 @@ ul li {
     display: flex;
     text-align: right;
     justify-content: space-between;
-    margin-right: 200px;
-    margin-left: 200px;
+    padding-right: 200px;
+    padding-left: 200px;
     align-items: center;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
 }
 
 .banner2-title {
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 3rem;
     font-weight: 700;
     padding-bottom: 30px;
@@ -218,20 +225,25 @@ p {
 .card-img {
     width: 100%;
     height: auto;
+    opacity: 1;
+    transition: .3s ease 1s;
+    backface-visibility: hidden;
 }
 
+.card:hover .card-img {
+    opacity: 0.3;
+}
 
 .middle {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
+    left: 0;
     height: 95%;
     width: 95%;
     opacity: 0;
     transition: .3s ease 1s;
-    background-color: #0B0223;
     border: 10px solid palevioletred;
     border-radius: 5px;
 }
@@ -247,7 +259,7 @@ p {
 }
 
 .icon {
-    color: white;
+    color: rgb(222, 10, 162);
     font-size: 100px;
     position: absolute;
 
@@ -262,12 +274,20 @@ p {
     text-align: left;
 }
 
+
+/* Banner 4 section style */
 .banner4 {
     display: flex;
-    margin-left: 200px;
     text-align: right;
-    gap: 200px;
     align-items: center;
+    margin-left: 100px;
+    justify-content: space-around;
+}
+
+.banner4-img {
+    width: 710px;
+    height: 650px;
+    margin-right: 100px;
 }
 
 .banner4-title {
@@ -289,12 +309,80 @@ p {
 }
 
 .removed-img {
-    height: 400px;
+    width: 318px;
+    height: 365px;
     position: relative;
-    top: 200px;
-    right: 950px;
+    right: 500px;
+    bottom: 300px;
 }
 
+
+/* section5 OR last section */
+.options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.option-img {
+    padding-left: 50px;
+    text-align: center;
+}
+
+.games-option:hover {
+    border: 5px solid palevioletred;
+    color: #F948B2;
+}
+
+.games-option:hover .option-title {
+    color: #F948B2;
+}
+
+.games-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+
+
+
+.option-title {
+    color: #0B0223;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* footer related styles */
+footer{
+    background-color: #0B0223;
+}
+footer li {
+    list-style: none;
+}
+#gamer1{
+    color: white;
+}
+.footer-head {
+    display: flex;
+    color: white;
+}
+.story-list{
+    color: white;
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
+}
+footer nav>li,
+p {
+    color: white;
+}
 
 /* for mobile phone of small devices */
 @media screen and (max-width:576px) {
@@ -320,18 +408,23 @@ p {
         text-align: start;
     }
 
-
+    #goat {
+        max-width: 100%;
+        height: auto;
+    }
 
     .banner1-play {
         font-size: 2rem;
         font-weight: 600;
         padding-left: 10px;
+        /* width: 80%; */
     }
 
     .banner1-goat {
         font-size: 2.6rem;
         font-weight: 600;
         padding-left: 10px;
+        /* width: 80%; */
     }
 
 
@@ -339,6 +432,7 @@ p {
     .banner1>div ul li {
         padding: 10px;
         font-size: 1rem;
+        /* width: 80%; */
     }
 
     .btn-div {
@@ -351,7 +445,8 @@ p {
     .banner2 {
         flex-direction: column;
         text-align: center;
-        margin: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .banner2-title {
@@ -372,6 +467,8 @@ p {
         width: 300px;
     }
 
+
+
     .btn3 {
         font-size: medium;
     }
@@ -381,26 +478,61 @@ p {
     }
 
     .banner4 {
-        /* flex-direction: column; */
-        /* margin-left: 0; */
+        flex-direction: column;
+        margin-left: 0;
     }
 
-    .banner4>div h2 {
+
+    .banner4-title {
         padding-bottom: 30px;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
-    .banner4>div {
-        text-align: center;
+    .banner4-description {
+        padding-bottom: 30px;
+        width: 300px;
+        font-size: .81rem;
+        font-weight: 400;
     }
 
-    .banner4>img {
-        /* width: 100%; */
+
+
+    .banner4-img {
+        max-width: 300px;
+        height: 300px;
+        margin-right: 10px;
     }
 
-    .removed-img{
-        width: 50%;
-        position: relative;
-        bottom: 50%;
+    .removed-img {
+        position: absolute;
+        right: 180px;
+        top: 4220px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .options {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+
+    }
+
+    .games-option {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .option-title {
+        font-size: .5rem;
+    }
+
+    .option-img {
+        width: 30px;
+        height: 30px;
+        padding-left: 0;
     }
 }
 
@@ -419,6 +551,22 @@ p {
         flex-direction: column-reverse;
     }
 
+    #goat {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner2 {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .banner2 img {
+        max-width: 700px;
+    }
+
     .banner2-title {
         background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
         background-clip: text;
@@ -434,5 +582,50 @@ p {
 
     .box-card {
         margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .middle {
+        border: 5px solid palevioletred;
+    }
+
+    .banner4 {
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    .banner4-img {
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .banner4-title,
+    .banner4-description {
+        padding-bottom: 30px;
+    }
+
+    .removed-img {
+        position: absolute;
+        left: 20px;
+        top: 3580px;
+    }
+
+    .options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .option-title {
+        font-size: .9rem;
+    }
+
+    .option-img {
+        padding-left: 5px;
+    }
+
+    .games-option {
+        padding: 5px;
+        margin-right: 0px;
     }
 }
