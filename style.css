@@ -361,26 +361,63 @@ p {
 }
 
 /* footer related styles */
-footer{
+footer {
     background-color: #0B0223;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
 }
+
 footer li {
     list-style: none;
 }
-#gamer1{
+
+#gamer1 {
     color: white;
 }
+
 .footer-head {
     display: flex;
     color: white;
+    padding-left: 800px;
+    padding-bottom: 30px;
 }
-.story-list{
+
+.story-list {
+    gap: 10px;
     color: white;
-    /* display: grid;
-    grid-template-columns: repeat(3,1fr); */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 550px;
+    width: 750px;
+    /* height: 200px; */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-footer nav>li,
-p {
+
+.footer-icons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding-left: 650px;
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.last-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-left: 600px;
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+footer nav>li {
+    color: white;
+}
+
+footer nav>p {
     color: white;
 }
 
@@ -515,7 +552,8 @@ p {
     .options {
         grid-template-columns: repeat(3, 1fr);
         padding: 10px;
-
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .games-option {
@@ -533,6 +571,43 @@ p {
         width: 30px;
         height: 30px;
         padding-left: 0;
+    }
+
+    footer {
+        padding-top: 50px;
+    }
+
+    .footer-head {
+        padding: 50px;
+        width: 0;
+    }
+
+    .story-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 40px;
+        width: 300px;
+        height: auto;
+    }
+
+    .footer-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 40px;
+        width: 300px;
+        height: auto;
+
+    }
+
+    .last-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 40px;
+        width: 300px;
+        height: auto;
     }
 }
 
@@ -561,6 +636,7 @@ p {
         text-align: center;
         padding-right: 10px;
         padding-left: 10px;
+        padding-bottom: 50px;
     }
 
     .banner2 img {
@@ -609,7 +685,7 @@ p {
     .removed-img {
         position: absolute;
         left: 20px;
-        top: 3580px;
+        top: 3700px;
     }
 
     .options {
@@ -627,5 +703,21 @@ p {
     .games-option {
         padding: 5px;
         margin-right: 0px;
+    }
+
+    .footer-head {
+        padding-left: 250px;
+    }
+
+    .story-list {
+        padding-left: 10px;
+    }
+
+    .footer-icons {
+        padding-left: 150px;
+    }
+
+    .last-list {
+        padding-left: 80px;
     }
 }
