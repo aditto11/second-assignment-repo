@@ -598,7 +598,9 @@ footer nav>p {
         padding: 40px;
         width: 300px;
         height: auto;
-
+    }
+    .footer-icons > img{
+        cursor: pointer;
     }
 
     .last-list {
